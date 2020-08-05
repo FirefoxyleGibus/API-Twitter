@@ -14,8 +14,8 @@ def Connect(client):
     auth = client.get_authentication_tokens()
     OAUTH_TOKEN = auth['oauth_token']
     OAUTH_TOKEN_SECRET = auth['oauth_token_secret']
-    auth['auth_url']
-    oauth_verifier = request.GET["d8sYM4JZloI9eZuJN0sCaHqdYanWNvp3"]
+    print(auth['auth_url'])
+    oauth_verifier = input(">>> ")
     client = Twython(Consumer_Key, Consumer_Secret,
                    OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
     final_step = client.get_authorized_tokens(oauth_verifier)
@@ -23,9 +23,9 @@ def Connect(client):
     F_OAUTH_TOKEN_SECRET = final_step['oauth_token_secret']
     client = Twython(Consumer_Key, Consumer_Secret,
                    F_OAUTH_TOKEN, F_OAUTH_TOKEN_SECRET)
-    return client
     User = client.verify_credentials()
     print(User["screen_name"],"succefully connected")
+    return client
 
 def Post(text):
     post = client.update_status(status=text)
