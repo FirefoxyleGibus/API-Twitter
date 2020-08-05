@@ -3,10 +3,8 @@ from twython import TwythonStreamer
 import json
 from random import shuffle
 
-with open(r"D:\Twitter API info\twitter_credentials.json", "r") as file:
-    creds = json.load(file)
-Consumer_Key = creds['CONSUMER_KEY']
-Consumer_Secret = creds['CONSUMER_SECRET']
+Consumer_Key = "VFXbBHwEwiCBuh1yssIwSpqPA"
+Consumer_Secret = "AEPk5SLqJtvW8cbBPQt8BBuvacfOifz0pw0QRJ48ZyKQCyVnGJ"
 Fox = Twython(Consumer_Key, Consumer_Secret)
 client = Twython(Consumer_Key, Consumer_Secret)
 
