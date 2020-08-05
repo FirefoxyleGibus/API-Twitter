@@ -106,9 +106,9 @@ Link : https://twitter.com/"""+str(data["user"]["screen_name"])+"/statuses/"+str
         for thing in content:
             print(thing)
         self.disconnect()
-Streamer = TStream(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'],
-                  creds["ACCESS_TOKEN"], creds["ACCESS_SECRET"])
 
+Streamer = "Pas dispo"
+        
 # Fonction Stream mais en plus simple voila
 def stream(**param):
     Streamer.statuses.filter(**param)
